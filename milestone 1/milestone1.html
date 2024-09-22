@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Milestone1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="image.jpg" id="img1">
+        <h1>NAHEEL AHSAN</h1>
+        <p>Contact: <a href="mailto:naheelahsan5234@gmail.com">naheelahsan5234@gmail.com</a>/0320222222</p>
+    </header>
+    
+    <section>
+        <h2 id="Education">Education</h2>
+        <ul>
+            <li><b><i>A-Levels from Beacon Light Academy</i></b></li>
+            <br>
+            <li><b><i>O-Levels from Beacon Light Academy</i></b></li>
+        </ul>
+
+        <h2 id="Skills">Skills</h2>
+        <!-- Add the ID here to target this section in JavaScript -->
+        <ul id="skills-section">
+            <li><b><i>Web Developer</i></b></li>
+            <br>
+            <li><b><i>Graphic Designer</i></b></li>
+            <br>
+            <li><b><i>Video Editor</i></b></li>
+            <br>
+            <li><b><i>Voice Artist</i></b></li>
+            <br>
+            <li><b><i>Tutor</i></b></li>
+        </ul>
+
+        <h2 id="WorkExperience">Work Experience</h2>
+        <p><b>- Doing web developing using HTML, CSS, JavaScript, TypeScript: Aug/23 - Current</b></p>
+        <p><b>- I am new at graphic designing and video editing: Still learning</b></p>
+        <p><b>- Started my journey of voice artist from Radio Pakistan and have done dubbing in Turkish Drama "Doraha", Have done 2 commercials and a stage act: 2016-2018</b></p>
+        <p><b>- Currently teaching Maths, Physics, Chemistry to O-Level students: Oct/23 - Current</b></p>
+    </section>
+
+    <button id="toggleSkillsBtn">Toggle Skills Section</button>
+
+    <script>
+        var toggleSkillsBtn = document.getElementById('toggleSkillsBtn');
+        var skillsSection = document.getElementById('skills-section');
+
+        function toggleSkillsVisibility() {
+            if (skillsSection.style.display === 'none') {
+                skillsSection.style.display = 'block';
+                toggleSkillsBtn.textContent = 'Hide Skills Section';
+            } else {
+                skillsSection.style.display = 'none';
+                toggleSkillsBtn.textContent = 'Show Skills Section';
+            }
+        }
+
+        toggleSkillsBtn.addEventListener('click', toggleSkillsVisibility);
+        skillsSection.style.display = 'block';
+    </script>
+</body>
+</html>
